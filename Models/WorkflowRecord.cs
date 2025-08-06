@@ -21,6 +21,11 @@ namespace WorkflowService.Models
         public string State { get; set; } = null!;
 
         /// <summary>
+        /// ID of the state machine this record belongs to.
+        /// </summary>
+        public string StateMachineId { get; set; } = null!;
+
+        /// <summary>
         /// Timestamp when the record was created.
         /// </summary>
         public DateTime CreatedAt { get; set; }

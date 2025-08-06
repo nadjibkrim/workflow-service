@@ -1,14 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  
+  <!-- Exclude test and benchmark projects from main project build -->
+  <!-- <ItemGroup>
+    <Compile Remove="WorkflowService.Tests/**" />
+    <EmbeddedResource Remove="WorkflowService.Tests/**" />
+    <None Remove="WorkflowService.Tests/**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="WorkflowService.Benchmarks/**" />
+    <EmbeddedResource Remove="WorkflowService.Benchmarks/**" />
+    <None Remove="WorkflowService.Benchmarks/**" />
+  </ItemGroup> -->
+  
   <ItemGroup>
     <!-- ORM and provider packages -->
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
     <!-- Tools for generating OpenAPI docs and UI -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
